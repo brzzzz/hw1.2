@@ -10,12 +10,19 @@ def degrees_to_radians(degrees):
     return result
 
 
-result1 = degrees_to_radians(60)
-result2 = degrees_to_radians(45)
-result3 = degrees_to_radians(40)
+var = degrees_to_radians(60)
+var1 = degrees_to_radians(45)
+var2 = degrees_to_radians(40)
 
-print('Резудьтат фунции перевода градусов в радианы при 60 будет равен %f, при 45 будет равен %f и 40 равен %f' %
-      (result1, result2, result3))
+result1 = math.cos(var)
+result2 = math.cos(var1)
+result3 = math.cos(var2)
+
+print('Результат фунции перевода градусов в радианы при 60 будет равен %f, при 45 будет равен %f и 40 равен  %f,' %
+      (var, var1, var2))
+print('при этом значения консинсов углов для 60 градусов будут равны %f, для 45 равно %f и для 40 равно %f'
+      % (result1, result2, result3))
+
 
 #----------------------------------------------------
 # Написать функцию, которая рассчитывает сумму всех цифр некоторого трехзначного числа, введенного
@@ -27,7 +34,7 @@ def amount(number):
     numeral = number // 100
     numeral1 = number % 100 // 10
     numeral2 = number % 10
-    result = int(numeral) + int(numeral2) + int(numeral1)
+    result = numeral + numeral2 + numeral1
     return result
 
 
@@ -35,5 +42,22 @@ result1 = amount(123)
 
 print('Результат суммы трёхзначного числа 123 будет равен %d' % result1)
 
+
+#----------------------------------------------------
+# Пользователь вводит длины катетов прямоугольного треугольника.
+# Написать функцию, которая вычислит площадь треугольника и его периметр.
+# Результат работы функции вывести на печать.
+
+a = 5
+
+
+def triangle_data(a):
+    triangle_square = 0.5 * a * a
+    triangle_perimeter = a + a + a
+    print('Площадь треугольника и его периметр равны %f и %.f' % (triangle_square, triangle_perimeter))
+    return triangle_square, triangle_perimeter
+
+
+triangle_data(a)
 
 
