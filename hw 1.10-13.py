@@ -50,16 +50,19 @@ print('Результат суммы трёхзначного числа 123 б�
 
 a = 5
 b = 5
+c = 5
+h = 5
 
 
-def triangle_data(a, b):
-    triangle_square = 0.5 * a * b
-    triangle_perimeter = a + b * 2
+def triangle_data(a, b, c, h):
+    triangle_square = 0.5 * a * h
+    triangle_perimeter = a + b + c
     print('Площадь треугольника и его периметр равны %.1f сантиметров квадратных и %.f сантиметров'
           % (triangle_square, triangle_perimeter))
     return triangle_square, triangle_perimeter
 
 
-triangle_data(a, b)
+triangle_data(a, b, c, h)
+
 
 
