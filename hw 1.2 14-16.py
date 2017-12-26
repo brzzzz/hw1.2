@@ -1,7 +1,7 @@
 import math
 
 
-# Написать функцию, которая будет проверять четность некоторого числа.
+#Написать функцию, которая будет проверять четность некоторого числа.
 
 
 def is_even(number):
@@ -28,20 +28,10 @@ else:
 # Каждая окружность задается координатами центра и радиусом.
 
 
-x1 = 7
-x2 = 5
-y1 = 5
-y2 = 7
-r1 = 2
-r2 = 2
-
-center_to_center_distance = (x1 - x2) ** 2 + (y1 - y2) ** 2
-
-radius_sum = r1 + r2
-
-
-def is_intersect(center_to_center_distance, radius_sum):
-    if center_to_center_distance <= radius_sum:
+def is_intersected(x1, y1, r1, x2, y2, r2):
+    center_to_center_distance = math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
+    radius_sum = r1 + r2
+    if center_to_center_distance >= radius_sum:
         print('Не пересекаются')
         return True
     else:
@@ -49,14 +39,13 @@ def is_intersect(center_to_center_distance, radius_sum):
         return False
 
 
-is_intersect(center_to_center_distance, radius_sum)
-
-
-
-
-
-
-
+x1 = (int(input('Введите координаты центра первой окружности по горизонтали:')))
+y1 = (int(input('Введите координаты центра первой окружности по вертикали:')))
+x2 = (int(input('Введите координаты центра второй окружности по горизонтали:')))
+y2 = (int(input('Введите координаты центра второй окружности по вертикали:')))
+r1 = (int(input('Введите длину радиуса первой окружности:')))
+r2 = (int(input('Введите длину радиуса второй окружности:')))
+is_intersected(x1, y1, r1, x2, y2, r2)
 
 
 
