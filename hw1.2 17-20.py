@@ -11,13 +11,12 @@ def solve_quadratic_equation(a, b, c):
     if discriminant > 0:
         x1 = (-b + math.sqrt(discriminant)) / (2 * a)
         x2 = (-b - math.sqrt(discriminant)) / (2 * a)
-        print(x1)
-        print(x2)
+        print('Найдено два корня: %d, %d' % (x1, x2))
     elif discriminant == 0:
         x = -b / (2 * a)
-        print(x)
+        print('Найден один корень: %d, None' % x)
     else:
-        print('Корней нет')
+        print('Корней нет: None, None')
 
 
 a = (int(input('Введите кофициэнт а:')))
@@ -34,3 +33,4 @@ solve_quadratic_equation(a, b, c)
 #             pass
 
 
+# def sum_symbol_codes(first, last):
