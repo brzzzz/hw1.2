@@ -6,23 +6,36 @@ import math
 #             pass
 
 
+
+
 def solve_quadratic_equation(a, b, c):
     discriminant = b ** 2 - 4 * a * c
     if discriminant > 0:
         x1 = (-b + math.sqrt(discriminant)) / (2 * a)
         x2 = (-b - math.sqrt(discriminant)) / (2 * a)
-        print('Найдено два корня: %d, %d' % (x1, x2))
+        print('Найдено два корня: %d' % x1)
+        print('и %d' % x2)
+        return x1, x2
     elif discriminant == 0:
-        x = -b / (2 * a)
-        print('Найден один корень: %d, None' % x)
+        x1 = -b / (2 * a)
+        print('Найден один корень: %d' % x1)
+        return x1, None
     else:
-        print('Корней нет: None, None')
+        print('Корней нет')
+        return None, None
 
 
-a = (int(input('Введите кофициэнт а:')))
+a = (int(input('Введите кофциэнт а:')))
 b = (int(input('Введите кофициэнт b:')))
 c = (int(input('Введите кофициэнт c:')))
 solve_quadratic_equation(a, b, c)
+
+
+
+
+
+
+
 
 
 # Каждому символу в таблице символов Unicode соответствует число.
